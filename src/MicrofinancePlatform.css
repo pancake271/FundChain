@@ -1,0 +1,210 @@
+/* Updated Carousel Section */
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #001f3f, #003d5c);
+  color: #ffffff;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-main-image {
+  width: 450px;
+  height: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.project-info {
+  margin-top: 20px;
+}
+
+/* Project Title Styling */
+.project-title {
+  font-size: 32px; /* Increased size for better readability */
+  font-weight: 800; /* Make it bold */
+  color: #ffffff; /* Pure white for maximum contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+  margin-bottom: 10px; /* Add spacing */
+  text-align: center; /* Align text properly */
+}
+
+.project-description {
+  font-size: 16px;
+  color: #d9e3ea;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+/* Navigation Buttons */
+/* General Button Styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #ffffff;
+  border: none;
+  font-size: 2rem; /* Size of the arrow */
+  border-radius: 50%; /* Circular button */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+  z-index: 2; /* Ensures buttons appear above other elements */
+}
+
+/* Hover Effects (Same for Both Arrows) */
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.3); /* Lighter background on hover */
+}
+
+/* Left Arrow */
+.left-arrow {
+  left: 20px;
+  opacity: 1; /* Ensure it's fully visible by default */
+  visibility: visible; /* Always visible */
+}
+
+/* Right Arrow */
+.right-arrow {
+  right: 20px;
+  opacity: 1; /* Ensure it's fully visible by default */
+  visibility: visible; /* Always visible */
+}
+
+/* Ensure Buttons Remain Consistent When Hovering Over Carousel */
+.carousel:hover .arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Fix Disappearing Issue */
+.arrow:hover {
+  opacity: 1; /* Prevent disappearing when hovered */
+  visibility: visible; /* Ensure button is visible when hovered */
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.dot.active {
+  transform: scale(1.3);
+  background: #00aaff;
+}
+
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Left and Right Data Panels */
+.project-data-left,
+.project-data-right {
+  background: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px; /* Ensure consistent sizing */
+  text-align: left; /* Align text properly */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better separation */
+}
+
+/* Text Styling */
+.project-data-left h3,
+.project-data-right h3 {
+  color: #003d5c; /* Deep sea blue */
+  font-weight: bold;
+  font-size: 20px; /* Increase font size */
+  margin-bottom: 10px;
+}
+
+.project-data-left p,
+.project-data-right p {
+  color: #003d5c; /* Matching color for better visibility */
+  font-weight: 600; /* Make text bold */
+  font-size: 16px; /* Ensure readability */
+  line-height: 1.5; /* Add proper spacing between lines */
+  margin-bottom: 10px;
+}
+
+/* Highlight Specific Data */
+.project-data-left p strong,
+.project-data-right p strong {
+  color: #007bff; /* Highlight important data points in blue */
+  font-weight: bold;
+}
+
+
+/* Carousel */
+.carousel-content {
+  color: white;
+  text-align: center;
+}
+
+.carousel-content .project-title {
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-content .project-description {
+  font-size: 16px;
+  color: #f1f1f1;
+}

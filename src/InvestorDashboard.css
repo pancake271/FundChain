@@ -1,0 +1,216 @@
+/* General Dashboard Styling */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card h3 {
+  font-size: 18px;
+  color: #007bff;
+}
+
+/* Filter Section */
+.filter-container {
+  margin-bottom: 20px;
+}
+
+.filter-container select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Investment List */
+.projects-section {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 5px;
+  height: 10px;
+  margin-top: 10px;
+}
+
+.progress {
+  background: #4caf50;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Earnings Section */
+.earnings-section {
+  text-align: center; /* Center-align the entire section */
+  margin: 30px 0; /* Add spacing above and below */
+}
+
+.transactions-section {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.transactions-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-section th,
+.transactions-section td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.transactions-section th {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.tx-hash {
+  font-family: monospace;
+  color: #0056b3;
+  word-wrap: break-word;
+}
+
+.transactions-section tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.transactions-section tr:hover {
+  background: #f1f1f1;
+}
+
+/* Chart Placeholder Styling */
+.chart-placeholder {
+  width: 100%;
+  max-width: 600px; /* Make the image larger */
+  margin: 20px auto; /* Center the image horizontally */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+  display: block; /* Ensure proper centering */
+}
+
+/* CTA Button (Withdraw Earnings) */
+.cta-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px auto 0; /* Add space above and center below the chart */
+  display: block; /* Center-align the button */
+  width: fit-content; /* Adjust width to fit content */
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+.withdrawal-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center the content */
+  justify-content: center; /* Vertically center the content */
+  text-align: center;
+}
+
+.withdrawal-input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center; /* Centers the text inside the input */
+}
+
+.earnings-balance {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
