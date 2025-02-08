@@ -10,7 +10,6 @@ export default function Header({ onSignIn, onSignUp }) {
     <header className="header">
       <div className="header-content">
         <div className="header-left">
-          {/* Add logo image */}
           <img
             src={logo}
             alt="FundChain Logo"
