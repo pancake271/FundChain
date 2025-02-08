@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import "./MicrofinancePlatform.css";
 import Header from "./Header";
 import SignInModal from "./SignInModal";
 import SignUpModal from "./SignUpModal";
 
-
 import aiTutorImage from "./images/5.jpeg";
 import solarEnergyImage from "./images/4.jpeg";
 import vrTravelImage from "./images/3.jpeg";
+import Footer from "./Footer";
 
 const projects = [
   {
@@ -54,7 +54,9 @@ function ProjectShowcase() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+    );
   };
 
   useEffect(() => {
@@ -73,9 +75,18 @@ function ProjectShowcase() {
         transition={{ duration: 0.8 }}
       >
         <h3>Project Statistics</h3>
-        <p><strong>Total Investors:</strong> {projects[currentIndex].data.totalInvestors}</p>
-        <p><strong>Funding Raised:</strong> {projects[currentIndex].data.fundingRaised}</p>
-        <p><strong>Funding Goal:</strong> {projects[currentIndex].data.fundingGoal}</p>
+        <p>
+          <strong>Total Investors:</strong>{" "}
+          {projects[currentIndex].data.totalInvestors}
+        </p>
+        <p>
+          <strong>Funding Raised:</strong>{" "}
+          {projects[currentIndex].data.fundingRaised}
+        </p>
+        <p>
+          <strong>Funding Goal:</strong>{" "}
+          {projects[currentIndex].data.fundingGoal}
+        </p>
       </motion.div>
 
       <div className="carousel">
@@ -92,12 +103,18 @@ function ProjectShowcase() {
             className="project-main-image"
           />
           <h2 className="project-title">{projects[currentIndex].title}</h2>
-          <p className="project-description">{projects[currentIndex].description}</p>
+          <p className="project-description">
+            {projects[currentIndex].description}
+          </p>
           <button className="cta-button">{projects[currentIndex].cta}</button>
         </motion.div>
 
-        <button className="arrow left-arrow" onClick={prevSlide}>&#8249;</button>
-        <button className="arrow right-arrow" onClick={nextSlide}>&#8250;</button>
+        <button className="arrow left-arrow" onClick={prevSlide}>
+          &#8249;
+        </button>
+        <button className="arrow right-arrow" onClick={nextSlide}>
+          &#8250;
+        </button>
 
         <div className="dots">
           {projects.map((_, index) => (
@@ -110,7 +127,6 @@ function ProjectShowcase() {
         </div>
       </div>
 
-      
       <motion.div
         className="project-data-right"
         key={`${projects[currentIndex].title}-right`}
@@ -119,7 +135,10 @@ function ProjectShowcase() {
         transition={{ duration: 0.8 }}
       >
         <h3>Investment Insights</h3>
-        <p>Discover how this project is making an impact and why it’s worth investing in.</p>
+        <p>
+          Discover how this project is making an impact and why it’s worth
+          investing in.
+        </p>
       </motion.div>
     </div>
   );
@@ -131,18 +150,29 @@ export default function MicrofinancePlatform() {
 
   return (
     <div className="page-container">
-      <Header onSignIn={() => setIsSignInOpen(true)} onSignUp={() => setIsSignUpOpen(true)} />
-      <SignInModal isOpen={isSignInOpen} onClose={() => setIsSignInOpen(false)} />
-      <SignUpModal isOpen={isSignUpOpen} onClose={() => setIsSignUpOpen(false)} />
-
+      <Header
+        onSignIn={() => setIsSignInOpen(true)}
+        onSignUp={() => setIsSignUpOpen(true)}
+      />
+      <SignInModal
+        isOpen={isSignInOpen}
+        onClose={() => setIsSignInOpen(false)}
+      />
+      <SignUpModal
+        isOpen={isSignUpOpen}
+        onClose={() => setIsSignUpOpen(false)}
+      />
       <div className="content" style={{ paddingTop: "120px" }}>
         <div className="intro">
           <h1 className="title">Welcome to FundChain</h1>
-          <p className="subtitle">Decentralized microfinance empowering small businesses.</p>
+          <p className="subtitle">
+            Decentralized microfinance empowering small businesses.
+          </p>
         </div>
 
         <ProjectShowcase />
       </div>
+      <Footer />
     </div>
   );
 }

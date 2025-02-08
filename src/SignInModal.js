@@ -17,11 +17,10 @@ const logoutUser = () => {
 export default function SignInModal({ isOpen, onClose, setAuthenticated }) {
   const [email, setEmail] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-    const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   useEffect(() => {
     const session = getUserSession();
     if (session) {
-      setAuthenticated(true);
       onClose();
     }
   }, [setAuthenticated, onClose]);
@@ -33,7 +32,6 @@ export default function SignInModal({ isOpen, onClose, setAuthenticated }) {
     }
 
     saveUserSession(email);
-    setAuthenticated(true);
     onClose();
   };
 

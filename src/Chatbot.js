@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { fetchDeepSeekResponse } from "./deepseekAPI";
-import "./Chatbot.css";
+import { fetchChatResponse } from "./deepseekService"; // Import API handler
+import "./Chatbot.css"; // Import CSS
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,28 +10,27 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // Handle sending messages
   const handleSend = async () => {
     if (!input.trim()) return;
 
     const userMessage = { sender: "user", text: input };
     setMessages((prev) => [...prev, userMessage]);
-    setInput("");
-    setLoading(true);
 
-    const botResponse = await fetchDeepSeekResponse(input, messages);
+    setLoading(true);
+    const botResponse = await fetchChatResponse(input);
     setMessages((prev) => [...prev, { sender: "bot", text: botResponse }]);
+
     setLoading(false);
+    setInput(""); // Clear input field
   };
 
   return (
     <div>
-      <button
-        className="chatbot-button"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        💬 Chat
-      </button>
+      {/* Floating Chat Button */}
+      <button className="chatbot-button" onClick={() => setIsOpen(!isOpen)}>💬 Chat</button>
 
+      {/* Chat Window */}
       {isOpen && (
         <div className="chatbot-window">
           <div className="chatbot-header">
