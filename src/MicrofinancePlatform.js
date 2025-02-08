@@ -5,7 +5,7 @@ import Header from "./Header";
 import SignInModal from "./SignInModal";
 import SignUpModal from "./SignUpModal";
 
-// Import images
+
 import aiTutorImage from "./images/5.jpeg";
 import solarEnergyImage from "./images/4.jpeg";
 import vrTravelImage from "./images/3.jpeg";
@@ -57,7 +57,6 @@ function ProjectShowcase() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
-  // Adjusted Auto-play timer (Now 10 seconds)
   useEffect(() => {
     const interval = setInterval(nextSlide, 10000);
     return () => clearInterval(interval);
@@ -79,7 +78,6 @@ function ProjectShowcase() {
         <p><strong>Funding Goal:</strong> {projects[currentIndex].data.fundingGoal}</p>
       </motion.div>
 
-      {/* Carousel */}
       <div className="carousel">
         <motion.div
           className="carousel-content"
@@ -98,11 +96,9 @@ function ProjectShowcase() {
           <button className="cta-button">{projects[currentIndex].cta}</button>
         </motion.div>
 
-        {/* Navigation Arrows */}
         <button className="arrow left-arrow" onClick={prevSlide}>&#8249;</button>
         <button className="arrow right-arrow" onClick={nextSlide}>&#8250;</button>
 
-        {/* Dots */}
         <div className="dots">
           {projects.map((_, index) => (
             <span
@@ -114,7 +110,7 @@ function ProjectShowcase() {
         </div>
       </div>
 
-      {/* Right Project Data */}
+      
       <motion.div
         className="project-data-right"
         key={`${projects[currentIndex].title}-right`}
@@ -145,7 +141,6 @@ export default function MicrofinancePlatform() {
           <p className="subtitle">Decentralized microfinance empowering small businesses.</p>
         </div>
 
-        {/* Project Showcase */}
         <ProjectShowcase />
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SignInModal.css";
 
-// Helper functions for Local Storage
 const saveUserSession = (email) => {
   localStorage.setItem("user", JSON.stringify({ email, isLoggedIn: true }));
 };
@@ -20,7 +19,6 @@ export default function SignInModal({ isOpen, onClose, setAuthenticated }) {
   const [rememberMe, setRememberMe] = useState(false);
     const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   useEffect(() => {
-    // Check if the user is already logged in
     const session = getUserSession();
     if (session) {
       setAuthenticated(true);
@@ -34,7 +32,6 @@ export default function SignInModal({ isOpen, onClose, setAuthenticated }) {
       return;
     }
 
-    // Save session to Local Storage
     saveUserSession(email);
     setAuthenticated(true);
     onClose();

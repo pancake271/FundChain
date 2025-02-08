@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import "./UploadProjectsPage.css";
 import Header from "./Header";
 import SignInModal from "./SignInModal";
-import { saveInvestmentToBlockchain } from "./blockchainSimulator"; // Import the blockchain simulator
+import { saveInvestmentToBlockchain } from "./blockchainSimulator"; 
 
-// Local Storage Helper Functions
 const loadProjectsFromLocal = () => {
   try {
     const projects = JSON.parse(localStorage.getItem("projects"));
@@ -17,7 +16,7 @@ const loadProjectsFromLocal = () => {
 };
 
 const saveProjectToLocal = (project) => {
-  const projectData = { ...project, businessPlan: null, logo: null }; // Exclude large files
+  const projectData = { ...project, businessPlan: null, logo: null }; 
   let projects = JSON.parse(localStorage.getItem("projects")) || [];
   projects.push(projectData);
   localStorage.setItem("projects", JSON.stringify(projects));
@@ -37,12 +36,12 @@ const getUserSession = () => {
 };
 
 const handleInvalidUserSession = () => {
-  localStorage.removeItem("user"); // Clear corrupted data
+  localStorage.removeItem("user"); 
 };
 
 const logoutUser = () => {
   localStorage.removeItem("user");
-  window.location.reload(); // Reload the page to reset state
+  window.location.reload(); 
 };
 
 export default function UploadProjectPage() {
@@ -63,9 +62,8 @@ export default function UploadProjectPage() {
   const [isSignInOpen, setIsSignInOpen] = useState(false);
   const [isAuthenticated, setAuthenticated] = useState(false);
 
-  const [errorMessage, setErrorMessage] = useState(""); // State to show upload errors
+  const [errorMessage, setErrorMessage] = useState(""); 
 
-  // Load data on initial render
   useEffect(() => {
     const storedProjects = loadProjectsFromLocal();
     setProjects(storedProjects);
@@ -79,21 +77,18 @@ export default function UploadProjectPage() {
     }
   }, []);
 
-  // Handle input changes for the form
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     updateProgress();
   };
 
-  // Handle file uploads
   const handleFileUpload = (e) => {
     const { name, files } = e.target;
     if (!files.length) return;
 
     const file = files[0];
 
-    // Validate file types
     if (name === "businessPlan" && file.type !== "application/pdf") {
       setErrorMessage("Only PDF files are allowed for the Business Plan.");
       return;
@@ -108,12 +103,11 @@ export default function UploadProjectPage() {
       return;
     }
 
-    setErrorMessage(""); // Clear any previous error
+    setErrorMessage(""); 
     setFormData({ ...formData, [name]: file });
     updateProgress();
   };
 
-  // Update progress bar
   const updateProgress = () => {
     let filledFields = Object.values(formData).filter(
       (v) => v !== "" && v !== null
@@ -121,20 +115,19 @@ export default function UploadProjectPage() {
     setProgress((filledFields / 7) * 100);
   };
 
-  // Handle form submission
   const handleSubmit = () => {
     if (!isAuthenticated) {
-      setIsSignInOpen(true); // Prompt user to sign in
+      setIsSignInOpen(true); 
       return;
     }
 
     const newProject = { ...formData, id: Date.now() };
 
-    // Simulate saving the project to blockchain
+    
     const blockchainTransaction = saveInvestmentToBlockchain({
       projectName: newProject.name,
       amount: newProject.goal,
-      investor: formData.wallet || "0xFakeWalletAddress", // Use wallet address or a fake one
+      investor: formData.wallet || "0xFakeWalletAddress", 
     });
 
     saveProjectToLocal(newProject);
@@ -155,7 +148,7 @@ export default function UploadProjectPage() {
     setProgress(0);
   };
 
-  // Generate preview for the form data
+  
   const generatePreview = () => {
     setPreview({ ...formData });
   };

@@ -1,4 +1,4 @@
-/* General Dashboard Styling */
+
 .dashboard-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   min-height: 100vh;
 }
 
-/* Header Section */
+
 .dashboard-header {
   text-align: center;
   margin-bottom: 30px;
@@ -21,7 +21,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Summary Cards */
+
 .summary-cards {
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@
   color: #007bff;
 }
 
-/* Filter Section */
+
 .filter-container {
   margin-bottom: 20px;
 }
@@ -59,7 +59,7 @@
   font-size: 14px;
 }
 
-/* Investment List */
+
 .projects-section {
   width: 90%;
   max-width: 1000px;
@@ -87,7 +87,7 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Progress Bar */
+
 .progress-bar {
   background: #e0e0e0;
   border-radius: 5px;
@@ -101,10 +101,10 @@
   border-radius: 5px;
 }
 
-/* Earnings Section */
+
 .earnings-section {
-  text-align: center; /* Center-align the entire section */
-  margin: 30px 0; /* Add spacing above and below */
+  text-align: center; 
+  margin: 30px 0; 
 }
 
 .transactions-section {
@@ -146,17 +146,17 @@
   background: #f1f1f1;
 }
 
-/* Chart Placeholder Styling */
+
 .chart-placeholder {
   width: 100%;
-  max-width: 600px; /* Make the image larger */
-  margin: 20px auto; /* Center the image horizontally */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
-  display: block; /* Ensure proper centering */
+  max-width: 600px; 
+  margin: 20px auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: block; 
 }
 
-/* CTA Button (Withdraw Earnings) */
+
 .cta-button {
   background: #007bff;
   color: white;
@@ -165,9 +165,9 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin: 20px auto 0; /* Add space above and center below the chart */
-  display: block; /* Center-align the button */
-  width: fit-content; /* Adjust width to fit content */
+  margin: 20px auto 0; 
+  display: block; 
+  width: fit-content; 
 }
 
 .cta-button:hover {
@@ -178,8 +178,8 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally center the content */
-  justify-content: center; /* Vertically center the content */
+  align-items: center; 
+  justify-content: center; 
   text-align: center;
 }
 
@@ -192,7 +192,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  text-align: center; /* Centers the text inside the input */
+  text-align: center; 
 }
 
 .earnings-balance {

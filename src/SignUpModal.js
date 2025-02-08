@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./SignUpModal.css";
 
-// Helper functions for Local Storage
 const saveUserToLocal = (user) => {
   let users = JSON.parse(localStorage.getItem("users")) || [];
   users.push(user);
@@ -39,7 +38,7 @@ export default function SignUpModal({ isOpen, onClose }) {
 
     alert("Account created successfully!");
     setFormData({ fullName: "", email: "", password: "" });
-    onClose(); // Close the modal after successful signup
+    onClose(); 
   };
 
   if (!isOpen) return null;

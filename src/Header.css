@@ -1,9 +1,9 @@
-/* Logo Styling */
+
 .header-logo {
-  height: 45px; /* Adjust height */
-  width: auto; /* Maintain aspect ratio */
-  cursor: pointer; /* Clickable logo */
-  margin-right: 10px; /* Space between logo and text */
+  height: 45px; 
+  width: auto; 
+  cursor: pointer; 
+  margin-right: 10px; 
   border-radius: 5px;
 }
 
@@ -21,7 +21,7 @@
   z-index: 1000;
 }
 
-/* Header Content Layout */
+
 .header-content {
   display: flex;
   width: 100%;
@@ -30,7 +30,7 @@
   margin-left: 150px;
 }
 
-/* Left Section: Logo + Navigation */
+
 .header-left {
   display: flex;
   align-items: center;
@@ -38,20 +38,20 @@
   flex-grow: 1;
 }
 
-/* Logo Styling */
+
 .logo {
   font-size: 24px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
 }
 
-/* Navigation Buttons */
+
 .nav-buttons {
   display: flex;
   gap: 15px;
 }
 
-/* Right Section: Authentication Buttons */
+
 .auth-buttons {
   display: flex;
   gap: 15px;
@@ -59,7 +59,7 @@
   margin-left: auto;
 }
 
-/* Button Styling */
+
 .nav-button {
   background-color: white;
   color: #007bff;

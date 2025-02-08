@@ -45,7 +45,7 @@
 
 .input-field,
 .textarea-field {
-  width: 100%; /* Full width for alignment */
+  width: 100%; 
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -54,31 +54,31 @@
   box-sizing: border-box;
 }
 
-/* Dropdown and File Inputs */
+
 .dropdown,
 .file-input {
   margin-bottom: 15px;
-  width: 100%; /* Full width for consistency */
+  width: 100%; 
 }
 
-/* Progress Bar */
+
 .progress-bar {
   height: 8px;
   background: linear-gradient(
     90deg,
     #007bff,
     #0056b3
-  ); /* Adds a gradient fill */
+  );
   border-radius: 8px;
   margin-top: 15px;
   transition: width 0.3s ease;
 }
 
-/* Buttons */
+
 .preview-button,
 .submit-button {
   padding: 10px 20px;
-  margin: 10px 5px; /* Adds spacing between buttons */
+  margin: 10px 5px; 
   font-size: 16px;
   color: white;
   background: #007bff;
@@ -86,7 +86,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  width: calc(50% - 10px); /* Equal button widths */
+  width: calc(50% - 10px); 
 }
 
 .preview-button:hover,
@@ -94,7 +94,7 @@
   background: #0056b3;
 }
 
-/* Preview Card */
+
 .preview-card {
   margin-top: 20px;
   background: #fff;

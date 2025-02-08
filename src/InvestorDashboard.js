@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./InvestorDashboard.css";
-import chartPlaceholder from "./images/output.png"; // Import chart image
+import chartPlaceholder from "./images/output.png"; 
 import Header from "./Header";
-import { getBlockchainTransactions } from "./blockchainSimulator"; // Import blockchain simulator for transactions
+import { getBlockchainTransactions } from "./blockchainSimulator"; 
 
 const mockData = {
   summary: {
@@ -46,21 +46,21 @@ export default function InvestorDashboard() {
   const [filteredProjects, setFilteredProjects] = useState(mockData.projects);
   const [filter, setFilter] = useState("All");
 
-  // States for withdrawal functionality
+  
   const [withdrawalAmount, setWithdrawalAmount] = useState("");
   const [isWithdrawing, setIsWithdrawing] = useState(false);
   const [withdrawalSuccess, setWithdrawalSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // New state for blockchain transactions
+  
   const [blockchainTransactions, setBlockchainTransactions] = useState([]);
 
-  // Fetch blockchain transactions on component mount
+  
   useEffect(() => {
     setBlockchainTransactions(getBlockchainTransactions());
   }, []);
 
-  // Handle filtering
+  
   useEffect(() => {
     if (filter === "All") {
       setFilteredProjects(investorData.projects);
@@ -71,7 +71,7 @@ export default function InvestorDashboard() {
     }
   }, [filter, investorData]);
 
-  // Handle withdrawal
+  
   const handleWithdrawEarnings = () => {
     const amountToWithdraw = parseFloat(withdrawalAmount);
 
@@ -88,12 +88,12 @@ export default function InvestorDashboard() {
     setErrorMessage("");
     setIsWithdrawing(true);
 
-    // Simulate a delay for API call
+    
     setTimeout(() => {
       setIsWithdrawing(false);
       setWithdrawalSuccess(true);
 
-      // Update state after withdrawal
+      
       setInvestorData((prevData) => ({
         ...prevData,
         summary: {

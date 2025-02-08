@@ -1,4 +1,3 @@
-/* Updated Carousel Section */
 .carousel {
   position: relative;
   display: flex;
@@ -40,14 +39,13 @@
   margin-top: 20px;
 }
 
-/* Project Title Styling */
 .project-title {
-  font-size: 32px; /* Increased size for better readability */
-  font-weight: 800; /* Make it bold */
-  color: #ffffff; /* Pure white for maximum contrast */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
-  margin-bottom: 10px; /* Add spacing */
-  text-align: center; /* Align text properly */
+  font-size: 32px; 
+  font-weight: 800; 
+  color: #ffffff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  margin-bottom: 10px; 
+  text-align: center; 
 }
 
 .project-description {
@@ -71,56 +69,49 @@
   background: #0056b3;
 }
 
-/* Navigation Buttons */
-/* General Button Styling */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5); 
   color: #ffffff;
   border: none;
-  font-size: 2rem; /* Size of the arrow */
-  border-radius: 50%; /* Circular button */
-  width: 40px;
+  font-size: 2rem; 
+  border-radius: 50%; 
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: background 0.3s ease, opacity 0.3s ease;
-  z-index: 2; /* Ensures buttons appear above other elements */
+  z-index: 2; 
 }
 
-/* Hover Effects (Same for Both Arrows) */
+
 .arrow:hover {
-  background: rgba(255, 255, 255, 0.3); /* Lighter background on hover */
+  background: rgba(255, 255, 255, 0.3); 
 }
 
-/* Left Arrow */
 .left-arrow {
   left: 20px;
-  opacity: 1; /* Ensure it's fully visible by default */
-  visibility: visible; /* Always visible */
+  opacity: 1; 
+  visibility: visible; 
 }
 
-/* Right Arrow */
 .right-arrow {
   right: 20px;
-  opacity: 1; /* Ensure it's fully visible by default */
-  visibility: visible; /* Always visible */
+  opacity: 1; 
+  visibility: visible;
 }
 
-/* Ensure Buttons Remain Consistent When Hovering Over Carousel */
 .carousel:hover .arrow {
   opacity: 1;
   visibility: visible;
 }
 
-/* Fix Disappearing Issue */
 .arrow:hover {
-  opacity: 1; /* Prevent disappearing when hovered */
-  visibility: visible; /* Ensure button is visible when hovered */
+  opacity: 1; 
+  visibility: visible; 
 }
 
 .dots {
@@ -144,7 +135,6 @@
   background: #00aaff;
 }
 
-/* Carousel Container */
 .carousel-container {
   display: flex;
   justify-content: space-between;
@@ -154,44 +144,40 @@
   position: relative;
 }
 
-/* Left and Right Data Panels */
 .project-data-left,
 .project-data-right {
-  background: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+  background: rgba(255, 255, 255, 0.9); 
   border-radius: 15px;
   padding: 20px;
-  width: 280px; /* Ensure consistent sizing */
-  text-align: left; /* Align text properly */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better separation */
+  width: 280px; 
+  text-align: left; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
-/* Text Styling */
 .project-data-left h3,
 .project-data-right h3 {
-  color: #003d5c; /* Deep sea blue */
+  color: #003d5c; 
   font-weight: bold;
-  font-size: 20px; /* Increase font size */
+  font-size: 20px; 
   margin-bottom: 10px;
 }
 
 .project-data-left p,
 .project-data-right p {
-  color: #003d5c; /* Matching color for better visibility */
-  font-weight: 600; /* Make text bold */
-  font-size: 16px; /* Ensure readability */
-  line-height: 1.5; /* Add proper spacing between lines */
+  color: #003d5c; 
+  font-weight: 600; 
+  font-size: 16px; 
+  line-height: 1.5; 
   margin-bottom: 10px;
 }
 
-/* Highlight Specific Data */
 .project-data-left p strong,
 .project-data-right p strong {
-  color: #007bff; /* Highlight important data points in blue */
+  color: #007bff; 
   font-weight: bold;
 }
 
 
-/* Carousel */
 .carousel-content {
   color: white;
   text-align: center;

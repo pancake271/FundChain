@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
-import logo from "./images/manta.webp"; // Updated logo file and format
+import logo from "./images/manta.webp"; 
 
 export default function Header({ onSignIn, onSignUp }) {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function Header({ onSignIn, onSignUp }) {
             src={logo}
             alt="FundChain Logo"
             className="header-logo"
-            onClick={() => navigate("/")} // Clickable logo for navigation
+            onClick={() => navigate("/")} 
           />
           <h1
             className="logo"
