@@ -91,12 +91,10 @@ export default function ViewProjectsPage() {
               <p>{project.progress}% funded</p>
             </div>
 
-            {/* View Business Button */}
             <button className="view-business-button" onClick={() => navigate(`/business/${project.businessId}`)}>
               View Business
             </button>
 
-            {/* Invest Now Button */}
             {project.status === "ONGOING" && (
               <button className="invest-button" onClick={() => handleInvestClick(project)}>
                 Invest Now
@@ -106,7 +104,6 @@ export default function ViewProjectsPage() {
         ))}
       </div>
 
-      {/* Investment Modal */}
       {isInvestModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">

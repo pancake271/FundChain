@@ -207,7 +207,6 @@ export default function UploadProjectPage() {
               <option value="Manufacturing">Manufacturing</option>
             </select>
 
-            {/* File Upload Section */}
             <div className="file-upload-section">
               <label className="upload-label">
                 Upload Business Plan (PDF only):
