@@ -1,27 +1,25 @@
 import axios from "axios";
 
-const API_URL = "https://deepseek-v3.p.rapidapi.com/chat";
-const API_KEY = "e85cc32515mshab46505b541dccap1c4714jsnf06c5293a40b"; // ⚠️ Replace with your API Key
+const API_URL = "https://deepseek-r1.p.rapidapi.com/";
+const API_KEY = "020e238ed1msh7378254369d2f1bp1f904cjsna9b192265eed"; // Replace with your actual API key
 
 export const fetchChatResponse = async (message) => {
-  try {
-    const response = await axios.post(
-      API_URL,
-      {
-        messages: [{ role: "user", content: message }],
-      },
-      {
-        headers: {
-          "x-rapidapi-key": API_KEY,
-          "x-rapidapi-host": "deepseek-v3.p.rapidapi.com",
-          "Content-Type": "application/json",
-        },
-      }
-    );
+  const data = {
+    model: "deepseek-r1",
+    messages: [{ role: "user", content: message }],
+  };
 
-    return response.data.messages[0]?.content || "No response from DeepSeek.";
+  const headers = {
+    "x-rapidapi-key": API_KEY,
+    "x-rapidapi-host": "deepseek-r1.p.rapidapi.com",
+    "Content-Type": "application/json",
+  };
+
+  try {
+    const response = await axios.post(API_URL, data, { headers });
+    return response.data;
   } catch (error) {
     console.error("Error fetching chat response:", error);
-    return "Error processing request.";
+    throw error;
   }
 };
